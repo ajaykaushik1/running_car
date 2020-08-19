@@ -5,17 +5,19 @@
 body {
   background-color: red;
   overflow: hidden;
+  /* animation: bodyMove linear infinite 2s; */
 }
 /* .container {
 } */
 .sky {
   position: absolute;
-  width: 150vw;
+  width: 300vw;
   height: 100vh;
   top: -50vh;
+  left: -30vw;
   background: url(skyimage.png) no-repeat;
   background-size: cover;
-  animation: skyMove linear infinite 1s;
+  animation: skyMove linear infinite 10s;
 }
 .car {
   position: absolute;
@@ -80,6 +82,17 @@ body {
 }
 @keyframes skyMove {
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-80vw);
+  }
+}
+@keyframes bodyMove {
+  0% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(+25px);
+  }
+  100% {
+    transform: translateY(-25px);
   }
 }
